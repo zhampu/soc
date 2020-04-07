@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e326f8e6-bd52-4c1f-a00b-e94900e1d5f3" name="juangomez.co" url="http://ftp.juangomez.co">
+        <fileTransfer host="ftp.juangomez.co" port="21" rootFolder="/public_html/vue-kirby">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
