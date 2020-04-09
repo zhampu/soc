@@ -1,0 +1,23 @@
+type: pages
+headline: Events
+parent: kirby.page("events")
+size: tiny
+info: "{{ page.images.count }} image(s)"
+layout: cards
+template: event
+empty: No events yet
+
+drafts:
+  headline: Unpublished events
+  status: draft
+unlisted:
+  headline: Events in review
+  status: unlisted
+listed:
+  headline: Published events
+  status: listed
+
+image:
+  query: page.cover
+  cover: true
+  ratio: 5/4

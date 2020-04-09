@@ -1,5 +1,5 @@
 # Each page blueprint must have a title, the title may be different from the file name
-title: Album
+title: Event
 
 # Each page can have an icon that is shown in page listings when no preview image is available.
 icon: 🖼
@@ -17,37 +17,47 @@ status:
 # More about columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns
 
 columns:
-  - width: 1/2
-
+  - width: 2/3
     sections:
-      ## The `images` files section shows all images of the current page that use the `image` template
+      editor:
+        type: fields
+        fields:
+          text:
+            label: Editor
+            type: editor
       images:
         type: files
-        layout: cards
+        layout: list
         template: image
         info: "{{ file.dimensions }}"
         image:
-          ratio: 5/4
+          ratio: 1/4
           cover: true
         min: 1
         size: small
 
-  - width: 1/2
-    # The second column contains a set of fields
-    # List of all available field types: https://getkirby.com/docs/reference/panel/fields
+
+
+  - width: 1/3
+
     fields:
       cover:
         type: files
         multiple: false
+        width: 1/3
+
       date:
         type: date
-        width: 1/2
+        width: 1/3
+
       headline:
-        type: text
-        width: 1/2
+        type: textarea
+
+
       guests:
         label: Artists
         type: structure
+
         fields:
           time:
             label: Time
@@ -65,9 +75,7 @@ columns:
       description:
         type: textarea
 #      tags: true
-      texto:
-        label: files
-        type: editor
+
 
 
 

@@ -3,12 +3,12 @@
     <Intro :page-title="page.title" />
 
     <ul v-if="page.children" class="albums" :data-even="page.children.length % 2 === 0">
-      <li v-for="album in page.children" :key="album.id">
-        <router-link :to="`/${album.id}`">
+      <li v-for="event in page.children" :key="event.id">
+        <router-link :to="`/${event.id}`">
           <figure>
-            <img :src="album.cover.url" :alt="album.cover.alt">
+            <img :src="event.cover.url" :alt="event.cover.alt">
 
-            <figcaption>{{ album.title }}</figcaption>
+            <figcaption>{{ event.title }}</figcaption>
           </figure>
         </router-link>
       </li>

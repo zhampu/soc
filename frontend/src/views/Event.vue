@@ -35,7 +35,7 @@
 import page from '@/mixins/page'
 
 export default {
-  name: 'Album',
+  name: 'Event',
 
   mixins: [page]
 }

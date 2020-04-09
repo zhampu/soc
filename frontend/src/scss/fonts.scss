@@ -1,11 +1,11 @@
-//@font-face {
-//  font-family: Till;
-//  src: url("Till-Normal.otf");
-//  font-weight: normal;
-//}
+@font-face {
+  font-family: Till;
+  src: url("/public/fonts/till-normal.otf");
+  font-weight: normal;
+}
 
 @font-face {
   font-family: PublicSans;
-  src: url("css/publicSans-variablefont_wght.ttf");
+  src: url("/public/fonts/publicsans-variablefont_wght.ttf");
   font-weight: normal;
 }

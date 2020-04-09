@@ -2,13 +2,13 @@
   <main id="main">
     <!--    <Intro :page-title="page.title" />-->
 
-    <div v-for="album in events.children" :key="album.id" class="module">
-      <router-link :to="`/${album.id}`">
+    <div v-for="event in events.children" :key="event.id" class="module">
+      <router-link :to="`/${event.id}`">
         <span>
 
-          <h2 class="example-name">{{ album.title }}</h2>
-          <h3 class="example-name">{{ album.headline }}</h3>
-          <time class="example-name">{{ album.date }}</time>
+          <h2 class="example-name">{{ event.title }}</h2>
+          <h3 class="example-name">{{ event.headline }}</h3>
+          <time class="example-name">{{ event.date }}</time>
         </span>
 
         <!--        <figure v-if="album.cover" class="album-cover">-->
