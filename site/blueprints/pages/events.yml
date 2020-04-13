@@ -1,12 +1,10 @@
 title: Events
 icon: 🖼
-
 sections:
   drafts:
     extends: sections/events
     headline: Drafts
     status: draft
-
   listed:
     extends: sections/events
     headline: Published Albums

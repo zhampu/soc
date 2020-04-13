@@ -1,5 +1,5 @@
 type: pages
-headline: Notes
+headline: Reflections
 parent: kirby.page("notes")
 info: "{{ page.date.toDate('d.m.Y') }}"
 template: note

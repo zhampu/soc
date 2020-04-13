@@ -51,7 +51,6 @@ export default {
   name: 'About',
 
   components: {
-    Intro
   },
 
   mixins: [page]

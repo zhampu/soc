@@ -29,6 +29,7 @@ return [
         'srcsets' => [
             'default' => [360, 720]
         ]
-    ]
+    ],
+
 
 ];

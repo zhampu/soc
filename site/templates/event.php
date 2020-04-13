@@ -3,8 +3,13 @@
 $data = [
   'title' => $page->title()->value(),
   'headline' => $page->headline()->or($page->title())->value(),
-  'description' => $page->description()->kt()->value(),
-  'guests' => $page->guests()->kt()->value(),
+  'description' => $page->description()->text()->footnotes(),
+  'editor' => $page->editor()->text()->blocks()->html(),
+  'guests' => $page->guests() === null ? null : [
+    'url' => $page->guests()->url(),
+    'name' => $page->guests()->name()->value(),
+    'time' => $page->guests()->time()->value(),
+  ],
   'date' => $page->date()->value(),
   'tags' => $page->tags()->isNotEmpty() ? $page->tags()->value() : null,
   'cover' => $page->cover() === null ? null : [

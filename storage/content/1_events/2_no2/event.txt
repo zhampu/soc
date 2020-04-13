@@ -2,6 +2,19 @@ Title: N10 Live Stream N:O 2
 
 ----
 
+Text:
+
+[
+    {
+        "attrs": [],
+        "content": "vdddddfvbsfdsd",
+        "id": "_84ad58r0b",
+        "type": "paragraph"
+    }
+]
+
+----
+
 Cover: 
 
 ----
@@ -18,12 +31,13 @@ Guests:
 
 - 
   time: 19:00
-  platform: Konstantinos Chinis(GR)
+  name: ""
   url: http://www.halldor.gr/
+  platform: Konstantinos Chinis(GR)
 
 ----
 
-Description: The second N10 live stream with Station of Commons will take place on Friday the 3rd. The following line-up will be broadcasted from all over Europe, starting at 19:00 EEST:
+Description: This is a footnote.[^Right here!] Here is a test with a footnote that contains a link.[^ Yes, there is indeed (link: https://getkirby.com text: a link.)] And, well, just to be sure things are working I'm throwing a third footnote in here.[^ All good!]
 
 ----
 

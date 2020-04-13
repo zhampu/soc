@@ -15,6 +15,7 @@
       <div class="album-text text">
         <h1>{{ page.headline }}</h1>
         <span v-html="page.description" />
+        <span v-html="page.editor" />
         <!--        <p v-if="page.tags" class="album-tags tags">{{ page.tags }}</p>-->
       </div>
 
@@ -83,22 +84,5 @@ export default {
   margin: 0 auto 6rem;
   text-align: left;
 }
-.album-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  margin: 0 auto;
-  grid-gap: 1rem;
-  max-width: calc(var(--content-width) - 15rem);
-  justify-content: center;
-}
-.album-gallery[data-even] {
-  grid-template-columns: repeat(4, 1fr);
-}
-.album-gallery[data-count='1'] {
-  grid-template-columns: 1fr;
-}
-.album-gallery[data-count='2'] {
-  grid-template-columns: 1fr 1fr;
-}
+
 </style>

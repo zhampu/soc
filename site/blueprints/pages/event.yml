@@ -41,7 +41,7 @@ columns:
             label: Time
             type: time
             width: 1/3
-          platform:
+          name:
             label: Name
             type: text
             width: 1/3
