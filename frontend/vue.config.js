@@ -3,7 +3,6 @@
 
 module.exports = {
 
-
   outputDir: '../public',
   productionSourceMap: false,
 
@@ -22,10 +21,7 @@ module.exports = {
   devServer: {
     proxy: process.env.VUE_APP_BACKEND_URL || 'http://127.0.0.1:8080',
     disableHostCheck: true
-  },
-
-
-
+  }
 
   // css: {
   //   loaderOptions: {

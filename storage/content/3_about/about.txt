@@ -9,6 +9,16 @@ A Station of Commons connects and communicates with other Stations of Com- mons 
 
 ----
 
+Peers:
+
+- 
+  platform: Simona Dvořáková
+  url: >
+    https://reshape.network/person/simona-dvorakova
+  mail: simonadvorakova11@gmail.com
+
+----
+
 Address:
 
 Mægazine Inc.

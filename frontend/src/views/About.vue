@@ -1,7 +1,6 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
   <main id="main">
-    <Intro :page-title="page.title" />
 
     <div class="layout">
       <aside>
@@ -47,7 +46,6 @@
 
 <script>
 import page from '@/mixins/page'
-import Intro from '@/components/Intro.vue'
 
 export default {
   name: 'About',

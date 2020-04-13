@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <!--    <router-link-->
-    <!--      ref="skiplink"-->
-    <!--      to="#main"-->
-    <!--      class="skip-to-content-link"-->
-    <!--      @click.native="scrollFix('#main')"-->
-    <!--    >-->
-    <!--      Skip to content-->
-    <!--    </router-link>-->
+    <router-link
+      ref="skiplink"
+      to="#main"
+      class="skip-to-content-link"
+      @click.native="scrollFix('#main')"
+    />
 
     <div class="page">
       <Header />
@@ -116,8 +114,12 @@ body{
 
 .skip-to-content-link:focus {
   transform: translate(-50%, 0%);
+  outline: none;
 }
 
+  *:focus {
+    outline: none;
+  }
 li {
   list-style: none;
 }

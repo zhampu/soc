@@ -18,13 +18,11 @@
 
 <script>
 import page from '@/mixins/page'
-import Intro from '@/components/Intro.vue'
 
 export default {
   name: 'Events',
 
   components: {
-    Intro
   },
 
   mixins: [page]

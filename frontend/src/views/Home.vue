@@ -1,7 +1,5 @@
 <template>
   <main id="main">
-    <!--    <Intro :page-title="page.title" />-->
-
     <div v-for="event in events.children" :key="event.id" class="module">
       <router-link :to="`/${event.id}`">
         <span>
@@ -25,14 +23,12 @@
 
 <script>
 import page from '@/mixins/page'
-// import Intro from '@/components/Intro.vue'
 
 export default {
   name: 'Home',
 
   components: {
 
-    // Intro
   },
 
   mixins: [page],
@@ -52,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 
   audio{
-width: 100%;
+    width: 100%;
 
     border: #2d2e36;
   }

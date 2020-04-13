@@ -11,13 +11,11 @@
 
 <script>
 import page from '@/mixins/page'
-import Intro from '@/components/Intro.vue'
 
 export default {
   name: 'Default',
 
   components: {
-    Intro
   },
 
   mixins: [page]
