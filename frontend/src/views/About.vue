@@ -2,6 +2,9 @@
   <!-- eslint-disable vue/no-v-html -->
   <main id="main">
     <div class="layout">
+      <div class="text">
+        <span v-html="page.text" />
+      </div>
       <aside>
         <section>
           <h2>Address</h2>
@@ -35,10 +38,6 @@
           </div>
         </section>
       </aside>
-
-      <div class="text">
-        <span v-html="page.text" />
-      </div>
     </div>
   </main>
 </template>
@@ -57,23 +56,23 @@ export default {
 </script>
 
 <style>
-.layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
-}
-
-@media screen and (min-width: 45rem) {
-  .layout {
-    grid-template-columns: 1fr 2fr;
+  .layout{
+    max-width: 40rem;
+    margin: 0 auto 6rem;
+    text-align: left;
   }
-}
 
-.layout aside section {
-  margin-bottom: 3rem;
-}
+/*@media screen and (min-width: 45rem) {*/
+/*  .layout {*/
+/*    grid-template-columns: 1fr 2fr;*/
+/*  }*/
+/*}*/
 
-.layout aside h2 {
-  margin-bottom: 0.75rem;
-}
+/*.layout aside section {*/
+/*  margin-bottom: 3rem;*/
+/*}*/
+
+/*.layout aside h2 {*/
+/*  margin-bottom: 0.75rem;*/
+/*}*/
 </style>

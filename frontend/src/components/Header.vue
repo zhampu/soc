@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-
     <router-link v-slot="{ href, isExactActive, navigate }" to="/">
       <a
         :href="href"
@@ -18,27 +17,32 @@
     >
       <source src="http://streamer.nettitila.fi:8000/Station_of_commons" type="audio/mpeg">
     </audio>
-    <nav id="menu" class="menu">
-      <router-link
-        v-for="page in $site.children.filter(page => page.isListed)"
-        v-slot="{ href, isExactActive, navigate }"
-        :key="page.id"
-        :to="`/${page.id}`"
-        @click.native="$root.scrollTop"
-      >
-        <a
-          :href="href"
-          :aria-current="isExactActive ? 'page' : false"
-          @click="navigate"
-        >
-          {{ page.title }}
-        </a>
-      </router-link>
-    </nav>
+    <div class="streaming">
+      <p class="red" href="http://streamer.nettitila.fi:8000/Station_of_commons" target="_blank" onclick="window.open(this.href,this.target,'width=400,height=400, top=70, left=20'); return false;">Stream in Browser</p>
+
+      <p class="red" href="http://streamer.nettitila.fi:8000/Station_of_commons.m3u">Stream in VLC</p>
+    </div>
+    <!--    <nav id="menu" class="menu">-->
+    <!--      <router-link-->
+    <!--        v-for="page in $site.children.filter(page => page.isListed)"-->
+    <!--        v-slot="{ href, isExactActive, navigate }"-->
+    <!--        :key="page.id"-->
+    <!--        :to="`/${page.id}`"-->
+    <!--        @click.native="$root.scrollTop"-->
+    <!--      >-->
+    <!--        <a-->
+    <!--          :href="href"-->
+    <!--          :aria-current="isExactActive ? 'page' : false"-->
+    <!--          @click="navigate"-->
+    <!--        >-->
+    <!--          {{ page.title }}-->
+    <!--        </a>-->
+    <!--      </router-link>-->
+    <!--    </nav>-->
   </header>
 </template>
 
-<script >
+<script>
 export default {
   name: 'Header'
 }
@@ -46,16 +50,19 @@ export default {
 
 <style lang="scss" scoped>
 
+ .streaming p{
+
+   cursor: pointer;
+   margin-bottom: 5px;
+   margin-top: 5px;
+ }
+
   .header {
     margin-bottom: 1.5rem;
 
-    .red{
+    .red {
       color: red;
     }
-  }
-
-  audio {
-    width: 100%;
   }
 
   .header a {
@@ -88,13 +95,14 @@ export default {
   .menu a.router-link-active {
     border-bottom: 2px solid #000;
   }
-  h1{
-margin-top: 0;
+
+  h1 {
+    margin-top: 0;
     margin-bottom: 0;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering:optimizeLegibility;
+    text-rendering: optimizeLegibility;
     font-weight: initial;
     line-height: 0.9;
   }
@@ -106,6 +114,7 @@ margin-top: 0;
     animation: live 3000ms infinite forwards;
     letter-spacing: 0.5px;
   }
+
   @keyframes live {
 
     100% {

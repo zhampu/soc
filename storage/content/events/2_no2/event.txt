@@ -9,13 +9,15 @@ Description:
 > "Venice, more than any other place, bears witness to the existence, from the sixteenth century on, of a unitary code or common language of the city."
 
 Henri Lefebvre / The Production of Space
-  
+
 While so many spaces happen to be temporary closed, we propose to reflect and act on both the conditions and consequences in terms of openings of new spaces. The experience of closing a space does not compare. We know that any social space always implies a great diversity of knowledges and practices. Administration, producers, curators, active or inactive members have their words in this process of construction of "what" happens "when". A top-down or highly hierarchical setup group of people always gathers certain constant elements to produce more. These modalities operate legally just as the framework used by democratic means to define a social person; an association or company. The process of organization defines the space, as we cannot differentiate the functional structure from the artefacts produced within. We propose here to think the position of the on-looker/participant in the space as the relation between peers within a non-centralized network topology in order to precise our closing/opening subject matter. 
 
 The essential property of a network is the ability to grow or decrease while maintaining communication and production. Thus the origin of the name "Cloud", data are always connected independently of the precise location or working status of a specific point in the network. The transmission speed, or bandwidth, of communication determines also the quality of operation. The procedures or protocols to follow are implemented to form the digital infrastructure. In case of digital network, protocols function above the hardware level and, below the software process. In other words, there is no actual need or direct purpose to know TCP/IP while coding HTML on your computer in Helsinki for a no-border website which server is located in Germany. What interests us here happens to be what we can learn when a physical space run by living members is closing its doors, and yet must pursue its operation.
 
 First, we have to understand that this closing process will take place within a very brief transition time. In the current situation, spaces must be closed on a legal stand point that was unforeseen-able beforehand. In case of a state of emergency, as it is the case now in many countries, we witness police that enforces the closing while most people generously agree. At the very moment, artistic practice… . We are supposedly in a no choice situation. The point is that we are summed to close physical spaces collectively, and organize individually anywhere else. The geometry of powers that individualizes us, encourages individual initiatives – artists are silenced in public or subjectified as online entrepreneurs. In this moment of closing space, do we see a process of individualization transforming into a singular subjectivity? If we can address the objective conditions, what then happens once a multitude of active singularities finds form? And specifically, when this multitude still needs to communicate and produce? What if we know and will assemble within and under the ban to assemble?   
-This operates as the concrete contradiction that will define the process to think how to produce new spaces. The condition to think what may be a new space, an actual social space, must resist in order to reappropiate means/forms of production and communication. If we agree that a space is defined by its production and means of communication, the digital space operates as any other. However, the digital space cannot be essentialized. And the purpose of this document is not to solve the issue. What is at stake here is somewhere else:
+This operates as the concrete contradiction that will define the process to think how to produce new spaces. The condition to think what may be a new space, an actual social space, must resist in order to reappropiate means/forms of production and communication. If we agree that a space is defined by its production and means of communication, the digital space operates as any other. However, the digital space cannot be essentialized. And the purpose of this document is not to solve the issue. 
+
+What is at stake here is somewhere else:
 
 We need to assess, distribute and install by ourselves the means of communication and production within a network always in the making. Most of the digital services on-line, available and for sale, are working using at some point open source software coded in license free language. We do not deny the added value done by work force, we claim that we can only produce new spaces by both getting closer to technology and distancing from existing mega-structures. 
 
@@ -35,7 +37,7 @@ Date: 2020-04-20
 
 ----
 
-Headline: Closing space, opening new ones
+Headline: Closing spaces, opening new ones
 
 ----
 

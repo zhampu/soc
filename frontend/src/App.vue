@@ -8,13 +8,28 @@
     />
 
     <div class="page">
+      <nav id="menu" class="menu">
+        <router-link
+          v-for="page in $site.children.filter(page => page.isListed)"
+          v-slot="{ href, isExactActive, navigate }"
+          :key="page.id"
+          :to="`/${page.id}`"
+          @click.native="$root.scrollTop"
+        >
+          <a
+            :href="href"
+            :aria-current="isExactActive ? 'page' : false"
+            @click="navigate"
+          >
+            {{ page.title }}
+          </a>
+        </router-link>
+      </nav>
       <Header />
-
       <keep-alive>
         <router-view :key="$route.path.substr(1) || 'home'" @update-title="updateTitle" />
       </keep-alive>
     </div>
-
     <Footer />
   </div>
 </template>

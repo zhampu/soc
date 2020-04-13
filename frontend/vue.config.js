@@ -35,7 +35,6 @@ module.exports = {
 
   }
 
-
   // configureWebpack: {
   //   plugins: [
   //     new ServiceWorkerWebpackPlugin({

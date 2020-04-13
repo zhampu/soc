@@ -1,8 +1,6 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
   <main id="main">
-    <!--    <Intro :page-title="page.title" />-->
-
     <div class="notes">
       <article v-for="note in page.children" :key="note.id" class="note">
         <header class="note-header">
@@ -18,20 +16,18 @@
 
 <script>
 import page from '@/mixins/page'
-// import Intro from '@/components/Intro.vue'
 
 export default {
   name: 'Notes',
 
   components: {
-    // Intro
   },
 
   mixins: [page]
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .notes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -40,16 +36,17 @@ export default {
 }
 .note {
   border: 2px solid #000;
+  a {
+    display: block;
+    padding: 1rem;
+    line-height: 1.25em;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  time {
+    font-size: 0.75rem;
+  }
 }
-.note a {
-  display: block;
-  padding: 1rem;
-  line-height: 1.25em;
-}
-.note h2 {
-  font-size: 1rem;
-}
-.note time {
-  font-size: 0.75rem;
-}
+
 </style>

@@ -7,7 +7,7 @@
           <img :src="page.cover.url" :alt="page.cover.alt">
 
           <figcaption>
-            <h1>{{ page.headline }}</h1>
+            <h2>{{ page.headline }}</h2>
           </figcaption>
         </figure>
       </header>
@@ -43,7 +43,11 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .album {
+    max-width: 40rem;
+    margin: 0 auto 6rem;
+    text-align: left;
+  }
 .album-cover {
   position: relative;
   line-height: 0;
@@ -75,8 +79,8 @@ export default {
   width: 100%;
   height: 100%;
 }
-.album-cover h1 {
-  font-size: 5rem;
+.album-cover h2 {
+  font-size: 3rem;
   font-weight: initial;
   font-family: Till;
 }
@@ -86,5 +90,16 @@ export default {
   text-align: left;
 
 }
+  ol {
+    list-style: none;
+    counter-reset:Acounter;
+    li {
+      counter-increment:Acounter;
+    }
+    li::before {
+      content: counter(Acounter) ". ";
+      font-family: Till;
+    }
+  }
 
 </style>
