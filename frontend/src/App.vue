@@ -103,6 +103,17 @@ body{
 
 }
 
+  p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    line-height: 1.5;
+
+  }
+
+  blockquote{
+    font-family: Till;
+  }
+
 .skip-to-content-link {
   position: absolute;
   left: 50%;

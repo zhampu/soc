@@ -42,7 +42,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
 .album-cover {
   position: relative;
   line-height: 0;
@@ -83,6 +84,7 @@ export default {
   max-width: 40rem;
   margin: 0 auto 6rem;
   text-align: left;
+
 }
 
 </style>

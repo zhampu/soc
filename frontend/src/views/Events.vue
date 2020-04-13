@@ -1,7 +1,5 @@
 <template>
   <main id="main">
-    <Intro :page-title="page.title" />
-
     <ul v-if="page.children" class="albums" :data-even="page.children.length % 2 === 0">
       <li v-for="event in page.children" :key="event.id">
         <router-link :to="`/${event.id}`">

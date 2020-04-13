@@ -30,6 +30,8 @@ return [
             'default' => [360, 720]
         ]
     ],
-
+    'markdown' => [
+        'breaks' => true
+    ]
 
 ];

@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+
     <router-link v-slot="{ href, isExactActive, navigate }" to="/">
       <a
         :href="href"
@@ -17,23 +18,23 @@
     >
       <source src="http://streamer.nettitila.fi:8000/Station_of_commons" type="audio/mpeg">
     </audio>
-    <!--    <nav id="menu" class="menu">
-    <router-link
-      v-for="page in $site.children.filter(page => page.isListed)"
-      v-slot="{ href, isExactActive, navigate }"
-      :key="page.id"
-      :to="`/${page.id}`"
-      @click.native="$root.scrollTop"
-    >
-      <a
-        :href="href"
-        :aria-current="isExactActive ? 'page' : false"
-        @click="navigate"
+    <nav id="menu" class="menu">
+      <router-link
+        v-for="page in $site.children.filter(page => page.isListed)"
+        v-slot="{ href, isExactActive, navigate }"
+        :key="page.id"
+        :to="`/${page.id}`"
+        @click.native="$root.scrollTop"
       >
-        {{ page.title }}
-      </a>
-    </router-link>
-  </nav>-->
+        <a
+          :href="href"
+          :aria-current="isExactActive ? 'page' : false"
+          @click="navigate"
+        >
+          {{ page.title }}
+        </a>
+      </router-link>
+    </nav>
   </header>
 </template>
 
@@ -51,6 +52,10 @@ export default {
     .red{
       color: red;
     }
+  }
+
+  audio {
+    width: 100%;
   }
 
   .header a {
@@ -76,6 +81,7 @@ export default {
 
   .menu a {
     margin: 0 0.75rem;
+    font-size: 1rem;
   }
 
   .menu a[aria-current],
@@ -91,6 +97,24 @@ margin-top: 0;
     text-rendering:optimizeLegibility;
     font-weight: initial;
     line-height: 0.9;
+  }
+
+  h6 {
+    font-family: Public Sans;
+    font-weight: 100;
+    font-variation-settings: 'wght' 100, 'wdth' 85;
+    animation: live 3000ms infinite forwards;
+    letter-spacing: 0.5px;
+  }
+  @keyframes live {
+
+    100% {
+      font-variation-settings: 'wght' 100, 'wdth' 85;
+    }
+    60% {
+      font-variation-settings: 'wght' 500, 'wdth' 300;
+    }
+
   }
 
 </style>

@@ -9,11 +9,9 @@ columns:
       description:
         type: fields
         fields:
-          text:
+          description:
             label: Description
             type: textarea
-
-
       images:
         type: files
         layout: cards

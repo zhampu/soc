@@ -1,7 +1,6 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
   <main id="main">
-
     <div class="layout">
       <aside>
         <section>
