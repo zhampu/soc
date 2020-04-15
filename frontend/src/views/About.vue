@@ -6,37 +6,36 @@
         <span v-html="page.text" />
       </div>
       <aside>
-        <section>
-          <h2>Address</h2>
-          <div class="text">
-            <span v-html="page.address" />
-          </div>
-        </section>
+        <!--        <section>-->
+        <!--          <h2>Address</h2>-->
+        <!--          <div class="text">-->
+        <!--            <span v-html="page.address" />-->
+        <!--          </div>-->
+        <!--        </section>-->
 
         <section>
-          <h2>Email</h2>
           <div class="text">
             <a :href="'mailto:' + page.email">{{ page.email }}</a>
           </div>
         </section>
 
-        <section>
-          <h2>Phone</h2>
-          <div class="text">
-            <a :href="'tel:' + page.phone">{{ page.phone }}</a>
-          </div>
-        </section>
+        <!--        <section>-->
+        <!--          <h2>Phone</h2>-->
+        <!--          <div class="text">-->
+        <!--            <a :href="'tel:' + page.phone">{{ page.phone }}</a>-->
+        <!--          </div>-->
+        <!--        </section>-->
 
-        <section>
-          <h2>On the web</h2>
-          <div class="text">
-            <ul>
-              <li v-for="social in page.social" :key="social.id">
-                <a :href="social.url">{{ social.platform }}</a>
-              </li>
-            </ul>
-          </div>
-        </section>
+        <!--        <section>-->
+        <!--          <h2>On the web</h2>-->
+        <!--          <div class="text">-->
+        <!--            <ul>-->
+        <!--              <li v-for="social in page.social" :key="social.id">-->
+        <!--                <a :href="social.url">{{ social.platform }}</a>-->
+        <!--              </li>-->
+        <!--            </ul>-->
+        <!--          </div>-->
+        <!--        </section>-->
       </aside>
     </div>
   </main>

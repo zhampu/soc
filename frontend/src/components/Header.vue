@@ -49,41 +49,49 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  h1 {
+    font-variant-ligatures: discretionary-ligatures common-ligatures;
+    font-size: 8rem;
+    margin: 0.67em 0;
+  }
 
- .streaming p{
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 4rem;
+      margin: 0.67em 0;
+      font-variant-ligatures: discretionary-ligatures common-ligatures;
+    }
+  }
+
+  .streaming p{
 
    cursor: pointer;
    margin-bottom: 5px;
    margin-top: 5px;
  }
 
-  .header {
-    margin-bottom: 1.5rem;
+ .logo {
 
-    .red {
-      color: red;
-    }
-  }
-
-  .header a {
-    position: relative;
-    font-size: 2.875rem;
-    letter-spacing: 0.05em;
     padding: 0.5rem 0;
-    font-family: Till;
-  }
 
-  .header .logo {
-
-    margin-bottom: 1.5rem;
-    padding: 0.5rem 0;
   }
 
   .header {
+    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    a {
+      position: relative;
+      font-size: 2.875rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0;
+      font-family: Till;
+    }
+    .red {
+      color: red;
+    }
   }
 
   .menu a {
@@ -108,7 +116,7 @@ export default {
   }
 
   h6 {
-    font-family: Public Sans;
+    font-family: Public Sans, sans-serif;
     font-weight: 100;
     font-variation-settings: 'wght' 100, 'wdth' 85;
     animation: live 3000ms infinite forwards;

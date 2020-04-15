@@ -77,111 +77,119 @@ export default {
 </script>
 
 <style lang="scss">
-
-  @import "scss/normalize.css";
-  @import "scss/fonts.scss";
-
-:root {
-  --content-width: 65rem;
-}
-
-*{
-
-}
-
-*,
-*:after,
-*:before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-}
-
-html {
-  font-family: Public Sans;
-
-}
-
-body{
-
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  -ms-overflow-style: none;
-  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  -moz-font-feature-settings: "kern=1", "liga=1", "calt=1";
-  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale;
-
-}
-
-  p{
-    margin-bottom: 10px;
-    margin-top: 10px;
-    line-height: 1.5;
-
-  }
-
-  blockquote{
+  @font-face {
     font-family: Till;
+    src: url('./fonts/Till-Normal.eot');
+    src: url('./fonts/Till-Normal.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Till-Normal.svg#Till-Normal') format('svg'),
+    url('./fonts/Till-Normal.ttf') format('truetype'),
+    url('./fonts/Till-Normal.woff') format('woff'),
+    url('./fonts/Till-Normal.woff2') format('woff2');
+    font-weight: normal;
   }
 
-.skip-to-content-link {
-  position: absolute;
-  left: 50%;
-  height: 2rem;
-  padding: 0.5rem;
-  transform: translate(-50%, -100%);
-  transition: transform 0.3s;
-}
+  @font-face {
+    font-family: Public Sans;
+    src: url('./fonts/publicsans-variablefont_wght.ttf') format('truetype');
+  }
 
-.skip-to-content-link:focus {
-  transform: translate(-50%, 0%);
-  outline: none;
-}
+  :root {
+    --content-width: 65rem;
+  }
+
+  * {
+
+  }
+
+  *,
+  *:after,
+  *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+
+  html {
+    font-family: Public Sans, sans-serif;
+
+  }
+
+  body {
+    font-kerning: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    -moz-font-feature-settings: "kern=1", "liga=1", "calt=1";
+    -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-variant-ligatures: discretionary-ligatures common-ligatures;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+
+  .skip-to-content-link {
+    position: absolute;
+    left: 50%;
+    height: 2rem;
+    padding: 0.5rem;
+    transform: translate(-50%, -100%);
+    transition: transform 0.3s;
+  }
+
+  .skip-to-content-link:focus {
+    transform: translate(-50%, 0%);
+    outline: none;
+  }
 
   *:focus {
     outline: none;
   }
-li {
-  list-style: none;
-}
 
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-.page {
-  padding: 5vh 5vw 10vh;
-}
-.page > * {
-  max-width: var(--content-width);
-  margin: 0 auto;
-}
-
-main {
-  min-height: calc(100vh - 10rem);
-}
-
-h6 {
-  font-family: Public Sans;
-  font-weight: 100;
-  font-variation-settings: 'wght' 100, 'wdth' 85;
-  animation: live 3000ms infinite forwards;
-  letter-spacing: 0.5px;
-}
-@keyframes live {
-
-  100% {
-    font-variation-settings: 'wght' 100, 'wdth' 85;
-  }
-  60% {
-    font-variation-settings: 'wght' 500, 'wdth' 300;
+  li {
+    list-style: none;
   }
 
-}
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .page {
+    padding: 5vh 5vw 10vh;
+  }
+
+  .page > * {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+
+  main {
+    min-height: calc(100vh - 10rem);
+  }
+
+  .menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+  blockquote {
+    font-family: Till;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    text-transform: uppercase;
+
+    p {
+      line-height: 1;
+      font-size: 2em;
+    }
+  }
 </style>

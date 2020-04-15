@@ -1,20 +1,21 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
-  <main id="main" class="album">
+  <main id="main" class="event">
     <article>
       <header>
-        <figure v-if="page.cover" class="album-cover">
+        <figure v-if="page.cover" class="cover">
           <img :src="page.cover.url" :alt="page.cover.alt">
 
           <figcaption>
-            <h2>{{ page.headline }}</h2>
+            <h2>{{ page.title }}</h2>
           </figcaption>
         </figure>
       </header>
 
-      <div class="album-text text">
-        <h1>{{ page.headline }}</h1>
+      <div class="text">
+        <!--        <h1>{{ page.headline }}</h1>-->
         <span v-html="page.description" />
+
         <span v-html="page.editor" />
         <!--        <p v-if="page.tags" class="album-tags tags">{{ page.tags }}</p>-->
       </div>
@@ -42,60 +43,78 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  .album {
-    max-width: 40rem;
-    margin: 0 auto 6rem;
+<style lang="scss" scoped>
+  h2 {
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    font-weight: initial;
+    font-family: Till;
+  }
+  @media (max-width: 768px) {
+  h2 {
+      font-size: 2.5rem;
+    }
+  }
+  .event {
+    /*max-width: 40rem;*/
+    /*margin: 0 auto 6rem;*/
     text-align: left;
   }
-.album-cover {
-  position: relative;
-  line-height: 0;
-  margin-bottom: 6rem;
-  background: #000;
-  padding-bottom: 75%;
-}
-.album-cover figcaption {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  color: #fff;
-  line-height: 1;
-  padding: 1.5rem;
-}
-.album-cover img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.album-cover h2 {
-  font-size: 3rem;
-  font-weight: initial;
-  font-family: Till;
-}
-.album-text {
-  max-width: 40rem;
-  margin: 0 auto 6rem;
-  text-align: left;
 
-}
+  .cover {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 6rem;
+    background: #000;
+    padding-bottom: 75%;
+
+    figcaption {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #fff;
+      line-height: 1;
+      padding: 1.5rem;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    }
+
+  }
+
+  .text {
+    max-width: 45rem;
+    margin: 0 auto 6rem;
+    text-align: left;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
   ol {
     list-style: none;
-    counter-reset:Acounter;
+    counter-reset: Acounter;
+
     li {
-      counter-increment:Acounter;
+      counter-increment: Acounter;
     }
+
     li::before {
       content: counter(Acounter) ". ";
       font-family: Till;

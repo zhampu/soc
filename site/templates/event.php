@@ -10,7 +10,7 @@ $data = [
     'name' => $page->guests()->name()->value(),
     'time' => $page->guests()->time()->value(),
   ],
-  'date' => $page->date()->value(),
+  'date' => $page->date()->toDate('d.m.Y'),
   'tags' => $page->tags()->isNotEmpty() ? $page->tags()->value() : null,
   'cover' => $page->cover() === null ? null : [
     'url' => $page->cover()->crop(1024, 768)->url(),

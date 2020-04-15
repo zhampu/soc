@@ -11,8 +11,15 @@ $data = [
       'cover' => $event->cover() === null ? null : [
         'url' => $event->cover()->crop(800, 1000)->url(),
         'urlHome' => $event->cover()->resize(1024, 1024)->url(),
-        'alt' => $event->cover()->alt()->value()
+        'alt' => $event->cover()->alt()->value(),
+      ],
+      'guests' => $event->guests() === null ? null : [
+        'url' => $event->guests()->url(),
+        'name' => $event->guests()->name()->value(),
+        'time' => $event->guests()->time()->value(),
       ]
+
+
     ];
   })->data())
 

@@ -8,84 +8,45 @@
     <div class="time-location">
       <ul>
         <li id="current-letter">_</li>
-        <li id="clock">{{ datenow }}</li>
-        <li id="coordinates">
-          <div v-if="errorStr">
-            Sorry, but the following error
-            occurred: {{ errorStr }}
-          </div>
+        <li id="clock"><digital-clock :display-seconds="true" /></li>
 
-          <div v-if="gettingLocation">
-            <i>Getting your location...</i>
-          </div>
-
-          <div v-if="location">
-            {{ location.coords.latitude }}, {{ location.coords.longitude }}
-          </div>
-        </li>
-        <li id="ip-address">Your City</li>
+        <li id="ip-address">{{ ciudad }}</li>
       </ul>
-
-      <!--        <button type="button" class="btn btn-primary col-1">STREAM</button>-->
     </div>
     <router-link to="/" @click.native="$root.scrollTop"><span class="copyleft">&copy;</span> {{ new Date().getFullYear() }} / {{ $site.title }}</router-link>
   </footer>
 </template>
 
 <script>
-import moment from 'moment'
+import DigitalClock from 'vue-digital-clock'
 export default {
   name: 'Footer',
-
+  components: {
+    DigitalClock
+  },
   data () {
     return {
       about: {},
       datenow: '',
-      location: null,
-      gettingLocation: false,
-      errorStr: null
+      ciudad: ''
     }
   },
   async created () {
     this.about = await this.$api.getPage('about')
-    if (!('geolocation' in navigator)) {
-      this.errorStr = 'Geolocation is not available.'
-      return
-    }
-    this.gettingLocation = true
-    // get position
-    navigator.geolocation.getCurrentPosition(pos => {
-      this.gettingLocation = false
-      this.location = pos
-    }, err => {
-      this.gettingLocation = false
-      this.errorStr = err.message
-    })
-    let ciudad
     fetch('https://ipapi.co/json/')
-      .then(function (response) {
-        return response.json()
-      })
-      .then(function (data) {
-        console.log(data)
-        ciudad = data.city
-        document.querySelector('#ip-address').innerHTML = ciudad
+      .then(response => response.json())
+      .then(json => {
+        this.ciudad = json.city
       })
   },
   mounted: function () {
-    this.time()
   },
   methods: {
-    time () {
-      var self = this
-      this.datenow = moment().format('hh:mm:ss a')
-      setInterval(self.time, 1000)
-    }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .copyleft{
     display:inline-block;
     transform: rotate(180deg);
@@ -96,10 +57,10 @@ export default {
   max-width: var(--content-width);
   margin: 0 auto;
   line-height: 1.5em;
-}
-.footer a {
-  display: inline-block;
-  font-size: 0.875rem;
+  a {
+    display: inline-block;
+    font-size: 0.875rem;
+  }
 }
 .footer > a {
   margin-bottom: 1.5rem;
@@ -108,20 +69,22 @@ export default {
   padding-top: 0.5rem;
 }
 
-.social a {
+.social{ a {
   margin: 0 0.75rem;
   padding: 0.5rem 1rem;
   border: 2px solid #000;
   width: 7.5rem;
 }
-.social a:hover {
-  background: #000;
-  color: #fff;
+  a:hover {
+    background: #000;
+    color: #fff;
+  }
 }
+
 .time-location{
   text-align: left;
   position:fixed;
-  top:87vh;
-  left:1vw;
+  bottom:10px;
+  left: 10px;
   }
 </style>

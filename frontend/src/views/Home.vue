@@ -3,19 +3,15 @@
     <div v-for="event in events.children" :key="event.id" class="module">
       <router-link :to="`/${event.id}`">
         <span>
+          <time class="date">{{ event.date }}</time>
+          <h2 class="title">{{ event.title }}</h2>
+          <hr>
+          <h4 class="headline">{{ event.headline }}</h4>
+          <!--          <h3 class="headline">{{ event.headline }}</h3>-->
+          <!--          <time class="date">{{ event.date }}</time>-->
+          <!--          <h3 class="artists">{{ event.guests.name }}</h3>-->
 
-          <h2 class="example-name">{{ event.title }}</h2>
-          <h3 class="example-name">{{ event.headline }}</h3>
-          <time class="example-name">{{ event.date }}</time>
         </span>
-
-        <!--        <figure v-if="album.cover" class="album-cover">-->
-        <!--          <img :src="album.cover.url" :alt="page.cover.alt">-->
-
-        <!--          <figcaption>-->
-        <!--            <h1>{{ page.headline }}</h1>-->
-        <!--          </figcaption>-->
-        <!--        </figure>-->
       </router-link>
     </div>
   </main>
@@ -63,11 +59,16 @@ export default {
     z-index: 1000;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 10px;
-    border-radius: .5rem;
-    border: 1px solid black;
-    /*<!--transform: skew(-5deg);-->*/
-
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    background: #fff;
+    border: 1px solid #000;
+    -webkit-border-radius: .8vh;
+    border-radius: .8vh;
+    padding: 3vh;
+    text-align: center;
+    max-width: 90vw;
+  }
     h2{
 
       font-family: Till;
@@ -75,13 +76,35 @@ export default {
       /*transform: skew(5deg);*/
 
     }
-
-    .example-name{
-      margin-top: 10px;
-      margin-bottom: 10px;
-      display: block
-
+  .date{
+    color: #ff0000;
+    display: block;
+    margin-bottom: 12px;
+  }
+    .title{
+      display: block;
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
+  .headline{
+    margin-top: 12px;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+
+  }
+
+  hr {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .10);
+    box-sizing: content-box;
+    overflow: visible;
+    height: 11.5px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 7px 7px 7px 7px;
   }
 
 </style>

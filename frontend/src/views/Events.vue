@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <ul v-if="page.children" class="albums" :data-even="page.children.length % 2 === 0">
+    <ul v-if="page.children" class="events" :data-even="page.children.length % 2 === 0">
       <li v-for="event in page.children" :key="event.id">
         <router-link :to="`/${event.id}`">
           <figure>
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style>
-.albums {
+.events {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -37,28 +37,28 @@ export default {
 }
 
 @media screen and (min-width: 30em) {
-  .albums {
+  .events {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 60em) {
-  .albums {
+  .events {
     grid-template-columns: repeat(3, 1fr);
   }
-  .albums[data-even] {
+  .events[data-even] {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.albums li {
+.events li {
   overflow: hidden;
   background: #000;
 }
-.albums figure {
+.events figure {
   position: relative;
   padding-bottom: 125%;
 }
-.albums figcaption {
+.events figcaption {
   position: absolute;
   top: 0;
   right: 0;
@@ -76,7 +76,7 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.125em;
 }
-.albums img {
+.events img {
   position: absolute;
   top: 0;
   right: 0;
@@ -87,7 +87,7 @@ export default {
   object-fit: cover;
   transition: all 0.3s;
 }
-.albums img:hover {
+.events img:hover {
   opacity: 0.2;
 }
 </style>

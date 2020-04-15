@@ -20,20 +20,15 @@ Peers:
 
 ----
 
-Address:
-
-Mægazine Inc.
-Sesamestreet 1
-Gotham City
-USA
+Address: 
 
 ----
 
-Email: mail@maegazine.com
+Email: mail@stationofcommons.org
 
 ----
 
-Phone: +49 1234 5678
+Phone: 
 
 ----
 
