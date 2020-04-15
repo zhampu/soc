@@ -24,3 +24,4 @@ package-lock.json
 /site/config/.retour
 /site/config/redirects.yml
 /site/logs/
+/.idea/
