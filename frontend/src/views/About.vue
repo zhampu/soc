@@ -61,17 +61,10 @@ export default {
     text-align: left;
   }
 
-/*@media screen and (min-width: 45rem) {*/
-/*  .layout {*/
-/*    grid-template-columns: 1fr 2fr;*/
-/*  }*/
-/*}*/
-
-/*.layout aside section {*/
-/*  margin-bottom: 3rem;*/
-/*}*/
-
-/*.layout aside h2 {*/
-/*  margin-bottom: 0.75rem;*/
-/*}*/
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
 </style>

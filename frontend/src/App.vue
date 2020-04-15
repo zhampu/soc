@@ -6,7 +6,6 @@
       class="skip-to-content-link"
       @click.native="scrollFix('#main')"
     />
-
     <div class="page">
       <nav id="menu" class="menu">
         <router-link
@@ -27,7 +26,12 @@
       </nav>
       <Header />
       <keep-alive>
-        <router-view :key="$route.path.substr(1) || 'home'" @update-title="updateTitle" />
+        <transition
+          name="fade"
+          mode="out-in"
+        >
+          <router-view :key="$route.path.substr(1) || 'home'" @update-title="updateTitle" />
+        </transition>
       </keep-alive>
     </div>
     <Footer />
@@ -97,8 +101,16 @@ export default {
     --content-width: 65rem;
   }
 
-  * {
+  .fade-enter-active,
+  .fade-leave-active {
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+  }
 
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0
   }
 
   *,
@@ -121,13 +133,13 @@ export default {
     height: 100vh;
     overflow-x: hidden;
     -ms-overflow-style: none;
-    -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-    -moz-font-feature-settings: "kern=1", "liga=1", "calt=1";
-    -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-    font-variant-ligatures: discretionary-ligatures common-ligatures;
+    -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1!important;
+    -moz-font-feature-settings: "kern=1", "liga=1", "calt=1"!important;
+    -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1!important;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1!important;
+    font-variant-ligatures: discretionary-ligatures common-ligatures!important;
     -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale!important;
   }
 
   p {
@@ -175,12 +187,22 @@ export default {
   main {
     min-height: calc(100vh - 10rem);
   }
-
   .menu {
+    z-index: 10;
     position: fixed;
     top: 10px;
     left: 10px;
+    a {
+      font-size: 1rem;
+    }
+
   }
+
+  .menu a[aria-current],
+  .menu a.router-link-active {
+    border-bottom: 2px solid #000;
+  }
+
   blockquote {
     font-family: Till;
     margin-bottom: 100px;
@@ -190,6 +212,11 @@ export default {
     p {
       line-height: 1;
       font-size: 2em;
+    }
+  }
+  @media (max-width: 768px) {
+    .menu{
+      left:4.7vw;
     }
   }
 </style>

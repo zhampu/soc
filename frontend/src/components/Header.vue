@@ -94,16 +94,6 @@ export default {
     }
   }
 
-  .menu a {
-    margin: 0 0.75rem;
-    font-size: 1rem;
-  }
-
-  .menu a[aria-current],
-  .menu a.router-link-active {
-    border-bottom: 2px solid #000;
-  }
-
   h1 {
     margin-top: 0;
     margin-bottom: 0;
@@ -128,7 +118,7 @@ export default {
     100% {
       font-variation-settings: 'wght' 100, 'wdth' 85;
     }
-    60% {
+    40% {
       font-variation-settings: 'wght' 500, 'wdth' 300;
     }
 
