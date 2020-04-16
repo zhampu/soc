@@ -7,20 +7,21 @@
           <img :src="page.cover.url" :alt="page.cover.alt">
 
           <figcaption>
-            <h2>{{ page.title }}</h2>
-
+            <h2 v-if="page.toggle === 'true' ">{{ page.title }}</h2>
+            <ul v-else class="artist-list">
+              <li v-for="guests in page.guests" :key="guests.id">
+                <span>{{ guests.time }}</span> <a :href="guests.url">{{ guests.name }}</a>
+              </li>
+            </ul>
           </figcaption>
         </figure>
       </header>
 
       <div class="text">
-
-
         <!--        <h1>{{ page.headline }}</h1>-->
         <div v-html="page.description" />
 
-
-<!--        <span v-html="page.editor" />-->
+        <!--        <span v-html="page.editor" />-->
         <!--        <p v-if="page.tags" class="album-tags tags">{{ page.tags }}</p>-->
       </div>
 
@@ -138,5 +139,13 @@ export default {
       font-family: Till;
     }
   }
+.artist-list{
+  font-size: 3.5rem;
+  font-family: Till;
+  text-align: left;
+li{
+  margin: 10px;
+}
+}
 
 </style>

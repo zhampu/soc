@@ -10,9 +10,9 @@ $data = [
       'url' => $guests->url()->value(),
       'name' =>$guests->name()->value(),
       'time' =>$guests->time()->toDate('H:i'),
-
     ];
   })->data()),
+  'toggle' => $page->toggle()->value(),
   'date' => $page->date()->toDate('d.m.Y'),
   'tags' => $page->tags()->isNotEmpty() ? $page->tags()->value() : null,
   'cover' => $page->cover() === null ? null : [

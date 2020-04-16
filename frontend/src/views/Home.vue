@@ -7,9 +7,6 @@
           <h2 class="title">{{ event.title }}</h2>
           <hr>
           <h4 class="headline">{{ event.headline }}</h4>
-          <!--          <h3 class="headline">{{ event.headline }}</h3>-->
-          <!--          <time class="date">{{ event.date }}</time>-->
-          <!--          <h3 class="artists">{{ event.guests.name }}</h3>-->
 
         </span>
       </router-link>
