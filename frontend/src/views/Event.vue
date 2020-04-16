@@ -8,15 +8,19 @@
 
           <figcaption>
             <h2>{{ page.title }}</h2>
+
           </figcaption>
         </figure>
       </header>
 
       <div class="text">
-        <!--        <h1>{{ page.headline }}</h1>-->
-        <span v-html="page.description" />
 
-        <span v-html="page.editor" />
+
+        <!--        <h1>{{ page.headline }}</h1>-->
+        <div v-html="page.description" />
+
+
+<!--        <span v-html="page.editor" />-->
         <!--        <p v-if="page.tags" class="album-tags tags">{{ page.tags }}</p>-->
       </div>
 
@@ -43,7 +47,21 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+  blockquote {
+    font-family: Till;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    text-transform: uppercase;
+
+    p {
+      line-height: 1;
+      font-size: 2em;
+    }
+  }
+  h3{
+    font-weight: normal;
+  }
   h2 {
     text-transform: uppercase;
     font-size: 4.5rem;

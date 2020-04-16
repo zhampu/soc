@@ -203,17 +203,6 @@ export default {
     border-bottom: 2px solid #000;
   }
 
-  blockquote {
-    font-family: Till;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    text-transform: uppercase;
-
-    p {
-      line-height: 1;
-      font-size: 2em;
-    }
-  }
   @media (max-width: 768px) {
     .menu{
       left:4.7vw;

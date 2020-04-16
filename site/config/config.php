@@ -31,7 +31,7 @@ return [
         ]
     ],
     'markdown' => [
-        'breaks' => true
+        'extra' => true
     ]
 
 ];

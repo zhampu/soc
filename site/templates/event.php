@@ -5,11 +5,14 @@ $data = [
   'headline' => $page->headline()->or($page->title())->value(),
   'description' => $page->description()->text()->footnotes(),
   'editor' => $page->editor()->text()->blocks()->html(),
-  'guests' => $page->guests() === null ? null : [
-    'url' => $page->guests()->url(),
-    'name' => $page->guests()->name()->value(),
-    'time' => $page->guests()->time()->value(),
-  ],
+  'guests' => array_values($page->guests()->toStructure()->map(function ($guests) {
+    return [
+      'url' => $guests->url()->value(),
+      'name' =>$guests->name()->value(),
+      'time' =>$guests->time()->toDate('H:i'),
+
+    ];
+  })->data()),
   'date' => $page->date()->toDate('d.m.Y'),
   'tags' => $page->tags()->isNotEmpty() ? $page->tags()->value() : null,
   'cover' => $page->cover() === null ? null : [
