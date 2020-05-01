@@ -97,8 +97,17 @@ export default {
     src: url('./fonts/publicsans-variablefont_wght.ttf') format('truetype');
   }
 
+  strong{
+    letter-spacing: 0.04em;
+  }
   :root {
     --content-width: 65rem;
+  }
+
+  .layout{
+    h2 {
+      font-weight: 500;
+    }
   }
 
   .fade-enter-active,

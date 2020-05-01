@@ -6,7 +6,10 @@
     "distantnative/retour-for-kirby": "^2.3",
     "beebmx/kirby-env": "^1.0",
     "kirbyzone/sitemapper": "^1.0",
-    "sylvainjule/footnotes": "^1.0"
+    "sylvainjule/footnotes": "^1.0",
+    "sylvainjule/matomo": "^1.0",
+    "k-community/markdown-field": "^1.0",
+    "bvdputte/kirby-autopublish": "^1.0"
   },
   "config": {
     "optimize-autoloader": true

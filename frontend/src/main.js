@@ -5,7 +5,20 @@ import KirbyApi from '@/api/kirby'
 // import '@/setup/registerServiceWorker'
 import '@/setup/plugins'
 import 'normalize.css'
-
+import VueMatomo from 'vue-matomo'
+import moment from 'moment'
+import VueCountdown from '@xkeshi/vue-countdown'
+Vue.component(VueCountdown.name, VueCountdown)
+Vue.prototype.moment = moment
+Vue.use(VueMatomo, {
+  host: 'https://track.juangomez.co/',
+  siteId: 4,
+  enableLinkTracking: true,
+  requireConsent: false,
+  trackInitialView: true,
+  trackerFileName: 'piwik',
+  debug: true
+})
 Vue.config.productionTip = false
 
 ;(async () => {

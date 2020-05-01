@@ -54,11 +54,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .layout{
     max-width: 40rem;
     margin: 0 auto 6rem;
     text-align: left;
+    h2 {
+      font-weight: 500;
+    }
+
   }
 
   .fade-enter-active, .fade-leave-active {

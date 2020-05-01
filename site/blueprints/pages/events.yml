@@ -1,11 +1,19 @@
 title: Events
 icon: 🖼
-sections:
-  drafts:
-    extends: sections/events
-    headline: Drafts
-    status: draft
-  listed:
-    extends: sections/events
-    headline: Published Albums
-    status: listed
+options:
+  url: True
+  status: true
+  delete: true
+
+drafts:
+  extends: sections/events
+  headline: Unpublished events
+
+unlisted:
+  extends: sections/events
+  headline: Unlisted events
+
+listed:
+  extends: sections/events
+  headline: Published event
+

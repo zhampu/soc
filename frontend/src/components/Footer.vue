@@ -11,6 +11,7 @@
         <li id="clock"><digital-clock :display-seconds="true" /></li>
 
         <li id="ip-address">{{ ciudad }}</li>
+        <li id="counter">{{ counter }}</li>
       </ul>
     </div>
     <router-link to="/" @click.native="$root.scrollTop"><span class="copyleft">&copy;</span> {{ new Date().getFullYear() }} / {{ $site.title }}</router-link>
@@ -19,6 +20,8 @@
 
 <script>
 import DigitalClock from 'vue-digital-clock'
+const moment = require('moment')
+require('moment-countdown')
 export default {
   name: 'Footer',
   components: {
@@ -28,8 +31,14 @@ export default {
     return {
       about: {},
       datenow: '',
-      ciudad: ''
+      ciudad: '',
+      counter: '',
+      date: ''
+
     }
+  },
+  computed: {
+
   },
   async created () {
     this.about = await this.$api.getPage('about')
@@ -38,15 +47,29 @@ export default {
       .then(json => {
         this.ciudad = json.city
       })
+    this.getTime()
   },
   mounted: function () {
   },
+  beforeDestroy () {
+    clearInterval(this.counter)
+  },
   methods: {
+    getTime () {
+      this.counter = setInterval(() => {
+        const countDownDate = moment('2020-05-09 20:00:00')
+        const diff = countDownDate.diff(moment())
+        this.counter = moment.utc(diff).format('D [days] HH:mm:ss')
+      }, 1000)
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+  .red{
+    color:red;
+  }
 .copyleft{
     display:inline-block;
     transform: rotate(180deg);
@@ -64,7 +87,6 @@ export default {
 }
 .footer > a {
   margin-bottom: 1.5rem;
-  border-top: 2px solid #000;
   width: 16.5rem;
   padding-top: 0.5rem;
 }

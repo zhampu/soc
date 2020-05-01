@@ -4,8 +4,8 @@
       <router-link :to="`/${event.id}`">
         <span>
           <time class="date">{{ event.date }}</time>
-          <h2 class="title">{{ event.title }}</h2>
-          <hr>
+          <h2 class="title hr">{{ event.title }}</h2>
+
           <h4 class="headline">{{ event.headline }}</h4>
 
         </span>
@@ -79,7 +79,7 @@ export default {
     margin-bottom: 12px;
   }
     .title{
-      display: block;
+      display: inline-block;
       font-size: 3rem;
       text-transform: uppercase;
       margin-bottom: 12px;
@@ -93,15 +93,21 @@ export default {
     font-weight: 400;
 
   }
-
-  hr {
-    box-shadow: 0 0 5px rgba(0, 0, 0, .10);
+  .hr:after {
+    content: '';
+    display: block;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .30);
     box-sizing: content-box;
     overflow: visible;
-    height: 11.5px;
-    background-color: #f1f1f1;
+    height: 15px;
+    background-color:red;
     border: none;
+    margin-top: 0.2em;
     border-radius: 7px 7px 7px 7px;
+    transition: 0.2s all;
   }
+  .hr:hover:after {
+    height: 20px;
 
+  }
 </style>

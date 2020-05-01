@@ -1,0 +1,19 @@
+title: Peers
+icon: 🖼
+options:
+  url: True
+  status: true
+  delete: true
+
+drafts:
+  extends: sections/peers
+  headline: Unpublished peers
+
+unlisted:
+  extends: sections/peers
+  headline: Unlisted peers
+
+listed:
+  extends: sections/peers
+  headline: Published peers
+

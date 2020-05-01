@@ -5,7 +5,7 @@ $data = [
   'email' => $page->email()->value(),
   'phone' => $page->phone()->value(),
   'address' => $page->address()->kt()->value(),
-  'text' => $page->text()->kt()->value(),
+  'text' => $page->text()->kt()->smartypants()->value(),
   'social' => array_values($page->social()->toStructure()->map(function ($social) {
     return [
       'url' => $social->url()->value(),

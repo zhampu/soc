@@ -3,28 +3,57 @@ options:
   changeTitle:
     admin: true
     editor: false
-columns:
-  - width: 1/2
+tabs:
+  content:
     sections:
-      drafts:
+      drafts_events:
         extends: sections/events
         headline: Unpublished events
         status: draft
-      unlisted:
+      unlisted_events:
         extends: sections/events
         headline: Events in review
         status: unlisted
-      listed:
+      listed_events:
         extends: sections/events
         headline: Published events
         status: listed
-  - width: 1/2
+
+  peers:
     sections:
-      notes: sections/notes
-      pages:
-        type: pages
-        create: default
-        templates:
-          - about
-          - home
-          - default
+      drafts:
+        extends: sections/peers
+        headline: Unpublished events
+        status: draft
+      unlisted:
+        extends: sections/peers
+        headline: Events in review
+        status: unlisted
+      listed:
+        extends: sections/peers
+        headline: Published events
+        status: listed
+
+  pages:
+    sections:
+        pages:
+          type: pages
+          create: default
+          templates:
+            - about
+            - home
+            - default
+
+  matomo:
+    label: Analytics
+    icon: chart
+    columns:
+      - width: 3/4
+        sections:
+          main:
+            type: matomo-main
+      - width: 1/4
+        sections:
+          sidebar:
+            type: matomo-sidebar
+            link: false

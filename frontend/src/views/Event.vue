@@ -5,7 +5,6 @@
       <header>
         <figure v-if="page.cover" class="cover">
           <img :src="page.cover.url" :alt="page.cover.alt">
-
           <figcaption>
             <h2 v-if="page.toggle === 'true' ">{{ page.title }}</h2>
             <ul v-else class="artist-list">
@@ -16,12 +15,15 @@
           </figcaption>
         </figure>
       </header>
-
       <div class="text">
-        <!--        <h1>{{ page.headline }}</h1>-->
+        <ul v-if="page.toggle ==='true'">
+          <li v-for="guests in page.guests" :key="guests.id">
+            <span>{{ guests.time }}</span> <a :href="guests.url">{{ guests.name }}</a>
+          </li>
+        </ul>
         <div v-html="page.description" />
-
-        <!--        <span v-html="page.editor" />-->
+        <div v-html="page.editor" />
+        <!--        <div v-html="page.editor" />-->
         <!--        <p v-if="page.tags" class="album-tags tags">{{ page.tags }}</p>-->
       </div>
 
@@ -34,6 +36,7 @@
       <!--                </figure>-->
       <!--              </li>-->
       <!--            </ul>-->
+      <!--      </ul>-->
     </article>
   </main>
 </template>
@@ -49,15 +52,26 @@ export default {
 </script>
 
 <style lang="scss">
+
+  .artist-list{
+    font-size: 3.5rem;
+    font-family: Till;
+    text-align: left;
+    letter-spacing: 0.03em;
+    li{
+      margin: 10px;
+    }
+  }
   blockquote {
     font-family: Till;
-    margin-bottom: 100px;
-    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     text-transform: uppercase;
+    line-height: 1;
+    font-size: 2em;
 
-    p {
+     p {
       line-height: 1;
-      font-size: 2em;
     }
   }
   h3{
@@ -72,6 +86,14 @@ export default {
   @media (max-width: 768px) {
   h2 {
       font-size: 2.5rem;
+    }
+    .artist-list{
+      font-size: 1.5rem;
+      font-family: Till;
+      text-align: center;
+      li{
+        margin: 10px;
+      }
     }
   }
   .event {
@@ -121,8 +143,18 @@ export default {
     margin: 0 auto 6rem;
     text-align: left;
 
+    figure{
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    img{
+      width: 100%;
+
+    }
+
     h1 {
       margin-bottom: 0;
+      font-weight: normal;
     }
   }
 
@@ -132,6 +164,12 @@ export default {
 
     li {
       counter-increment: Acounter;
+      display: inline-block;
+      p{
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
     }
 
     li::before {
@@ -139,13 +177,5 @@ export default {
       font-family: Till;
     }
   }
-.artist-list{
-  font-size: 3.5rem;
-  font-family: Till;
-  text-align: left;
-li{
-  margin: 10px;
-}
-}
 
 </style>

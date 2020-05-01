@@ -1,0 +1,23 @@
+type: pages
+headline: Peers
+parent: kirby.page("peers")
+size: tiny
+info: "{{ page.images.count }} image(s)"
+layout: cards
+template: peer
+empty: No peers yet
+
+drafts:
+  headline: Unpublished peers
+  status: draft
+unlisted:
+  headline: peers in review
+  status: unlisted
+listed:
+  headline: Published peers
+  status: listed
+
+image:
+  query: page.cover
+  cover: true
+  ratio: 5/4
