@@ -23,22 +23,22 @@ tabs:
     sections:
       drafts:
         extends: sections/peers
-        headline: Unpublished events
+        headline: Unpublished peers
         status: draft
       unlisted:
         extends: sections/peers
-        headline: Events in review
+        headline: Peers in review
         status: unlisted
       listed:
         extends: sections/peers
-        headline: Published events
+        headline: Published Peers
         status: listed
 
   pages:
     sections:
         pages:
           type: pages
-          create: default
+          create: events
           templates:
             - about
             - home

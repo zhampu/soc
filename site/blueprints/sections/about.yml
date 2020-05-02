@@ -1,0 +1,9 @@
+title: About
+icon: 🖼
+extends: pages/about
+options:
+  url: True
+  status: true
+  delete: true
+
+

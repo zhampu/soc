@@ -25,18 +25,9 @@
         <div v-html="page.editor" />
         <!--        <div v-html="page.editor" />-->
         <!--        <p v-if="page.tags" class="album-tags tags">{{ page.tags }}</p>-->
+<!--        <figure v-for="image in page.gallery" :key="image.url" class="cover">-->
+<!--          <img :src="image[0].url" :alt="image.alt">-->
       </div>
-
-      <!--            <ul v-if="page.gallery" class="album-gallery" :data-even="page.gallery.length % 2 === 0" :data-count="page.gallery.length">-->
-      <!--              <li v-for="image in page.gallery" :key="image.url">-->
-      <!--                <figure>-->
-      <!--                  <a :href="image.link">-->
-      <!--                    <img :src="image.url" :alt="image.alt">-->
-      <!--                  </a>-->
-      <!--                </figure>-->
-      <!--              </li>-->
-      <!--            </ul>-->
-      <!--      </ul>-->
     </article>
   </main>
 </template>

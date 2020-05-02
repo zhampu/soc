@@ -7,7 +7,7 @@
       @click.native="scrollFix('#main')"
     />
     <div class="page">
-      <nav id="menu" class="menu">
+      <nav class="menu">
         <router-link
           v-for="page in $site.children.filter(page => page.isListed)"
           v-slot="{ href, isExactActive, navigate }"
@@ -204,6 +204,10 @@ export default {
     a {
       font-size: 1rem;
     }
+    a:nth-child(2) {
+      position: fixed;
+      right: 10px;
+    }
 
   }
 
@@ -211,7 +215,6 @@ export default {
   .menu a.router-link-active {
     border-bottom: 2px solid #000;
   }
-
   @media (max-width: 768px) {
     .menu{
       left:4.7vw;

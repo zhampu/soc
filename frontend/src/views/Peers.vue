@@ -7,7 +7,6 @@
           <h2 class="title hr">{{ peer.title }}</h2>
 
           <h4 class="headline">{{ peer.headline }}</h4>
-
         </span>
       </router-link>
     </div>
