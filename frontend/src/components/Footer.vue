@@ -11,7 +11,8 @@
         <li id="clock"><digital-clock :display-seconds="true" /></li>
 
         <li id="ip-address">{{ ciudad }}</li>
-        <li id="counter">{{ counter }}</li>
+<!--        <li id="counter">{{ counter }}</li>-->
+        <li class="red" id="counter">LIVE NOW</li>
       </ul>
     </div>
     <router-link to="/" @click.native="$root.scrollTop"><span class="copyleft">&copy;</span> {{ new Date().getFullYear() }} / {{ $site.title }}</router-link>
@@ -57,7 +58,7 @@ export default {
   methods: {
     getTime () {
       this.counter = setInterval(() => {
-        const countDownDate = moment('2020-05-09 20:00:00')
+        const countDownDate = moment('2020-05-08 17:00:00')
         const diff = countDownDate.diff(moment())
         this.counter = moment.utc(diff).format('D [days] HH:mm:ss')
       }, 1000)

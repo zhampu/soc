@@ -41,7 +41,10 @@ return [
 //    'fieldName' => 'autopublish',
 //    'bvdputte.kirbyAutopublish.poormanscron' => true,
     //Smartypants corrections
-    'smartypants' => true
+    'smartypants' => true,
+
+        'languages' => true
+
 
 
 ];

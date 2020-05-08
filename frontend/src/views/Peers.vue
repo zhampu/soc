@@ -58,7 +58,6 @@ export default {
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .25);
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
     background: #fff;
-    border: 1px solid #000;
     -webkit-border-radius: .8vh;
     border-radius: .8vh;
     padding: 3vh;
@@ -98,7 +97,7 @@ export default {
     box-shadow: 0 0 5px rgba(0, 0, 0, .30);
     box-sizing: content-box;
     overflow: visible;
-    height: 15px;
+    height: 10px;
     background-color:#a7bd68;
     border: none;
     margin-top: 0.2em;
@@ -106,7 +105,7 @@ export default {
     transition: 0.2s all;
   }
   .hr:hover:after {
-    height: 20px;
+    height: 15px;
 
   }
 </style>

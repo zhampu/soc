@@ -207,6 +207,7 @@ export default {
     a:nth-child(2) {
       position: fixed;
       right: 10px;
+      top:10px;
     }
 
   }

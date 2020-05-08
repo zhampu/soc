@@ -156,6 +156,9 @@ export default {
       margin-bottom: 0;
       font-weight: normal;
     }
+    a{
+      font-variation-settings: 'wght' 700;
+    }
   }
 
   ol {

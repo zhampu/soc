@@ -16,13 +16,13 @@ $data = [
   'date' => $page->date()->toDate('d.m.Y'),
   'tags' => $page->tags()->isNotEmpty() ? $page->tags()->value() : null,
   'cover' => $page->cover() === null ? null : [
-    'url' => $page->image()->crop(1024, 768)->url(),
+    'url' => $page->cover()->crop(1024, 768)->url(),
     'alt' => $page->cover()->alt()->value()
   ],
   'gallery' => array_values($page->images()->sortBy('sort')->map(function ($image) {
     return [
       'link' => $image->link()->or($image->url())->value(),
-      'url' => $image->crop(1024, 768)->url(),
+      'url' => $image->crop(800, 1000)->url(),
       'alt' => $image->alt()->value()
     ];
   })->data())
