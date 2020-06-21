@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf6ae900b82eb47fe56406b92f5ea062",
+    "content-hash": "eccad9412186b8e44b22644d01ee4a20",
     "packages": [
         {
             "name": "beebmx/kirby-env",
@@ -242,16 +242,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "3.3.4",
+            "version": "3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "0330c0ae4214cde349710b099a770fffd0971b4e"
+                "reference": "fa549aae38d5555e297b1870071418c5bb4a95f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/0330c0ae4214cde349710b099a770fffd0971b4e",
-                "reference": "0330c0ae4214cde349710b099a770fffd0971b4e",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/fa549aae38d5555e297b1870071418c5bb4a95f1",
+                "reference": "fa549aae38d5555e297b1870071418c5bb4a95f1",
                 "shasum": ""
             },
             "require": {
@@ -297,7 +297,7 @@
                 "core",
                 "kirby"
             ],
-            "time": "2020-02-18T08:42:36+00:00"
+            "time": "2020-04-27T11:56:29+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -706,6 +706,42 @@
                 "yml"
             ],
             "time": "2017-02-24T16:06:33+00:00"
+        },
+        {
+            "name": "oblik/kirby-git",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OblikStudio/kirby-git.git",
+                "reference": "3f77ac903f4d0ab28f62c15b6daba64e0a0627b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OblikStudio/kirby-git/zipball/3f77ac903f4d0ab28f62c15b6daba64e0a0627b1",
+                "reference": "3f77ac903f4d0ab28f62c15b6daba64e0a0627b1",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^3.3",
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "git"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hristiyan Dodov",
+                    "email": "h.dodov@gmail.com",
+                    "homepage": "https://dodov.me/"
+                }
+            ],
+            "description": "Shows you Git changes in the Kirby panel and allows you to add/commit/push them, manually or automatically.",
+            "time": "2020-04-12T08:00:23+00:00"
         },
         {
             "name": "paquettg/php-html-parser",

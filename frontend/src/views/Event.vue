@@ -14,6 +14,14 @@
             </ul>
           </figcaption>
         </figure>
+        <video v-if="page.toggle === 'true'" controls="controls" autoplay="autoplay">
+          <source :src="page.streamurl" type="video/webm">
+          <source src="http://streamer.nettitila.fi:8000/video1" type="video/MP2T">
+          <source src="http://streamer.nettitila.fi:8000/video1.m3u" type="video/MP2T">
+          <source src="http://streamer.nettitila.fi:8000/Station_of_commons_video" type="video/webm">
+
+
+        </video>
       </header>
       <div class="text">
         <ul v-if="page.toggle ==='true'">
@@ -180,5 +188,12 @@ export default {
       font-family: Till;
     }
   }
+video{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 40px;
+  width: 100%;
+}
 
 </style>

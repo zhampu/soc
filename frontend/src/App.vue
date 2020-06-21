@@ -211,7 +211,9 @@ export default {
     }
 
   }
-
+pre{
+  overflow: auto
+}
   .menu a[aria-current],
   .menu a.router-link-active {
     border-bottom: 2px solid #000;

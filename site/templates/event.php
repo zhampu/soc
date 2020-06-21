@@ -13,6 +13,8 @@ $data = [
     ];
   })->data()),
   'toggle' => $page->toggle()->value(),
+  'live' => $page->toggle()->value(),
+  'streamurl' => $page->streamurl()->value(),
   'date' => $page->date()->toDate('d.m.Y'),
   'tags' => $page->tags()->isNotEmpty() ? $page->tags()->value() : null,
   'cover' => $page->cover() === null ? null : [

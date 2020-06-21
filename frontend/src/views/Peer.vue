@@ -42,13 +42,13 @@
 </template>
 
 <script>
-  import page from '@/mixins/page'
+import page from '@/mixins/page'
 
-  export default {
-    name: 'Event',
+export default {
+  name: 'Event',
 
-    mixins: [page]
-  }
+  mixins: [page]
+}
 </script>
 
 <style lang="scss">

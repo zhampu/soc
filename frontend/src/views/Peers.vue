@@ -78,7 +78,7 @@ export default {
   }
   .title{
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2.6rem;
     text-transform: uppercase;
     margin-bottom: 12px;
   }

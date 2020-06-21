@@ -11,8 +11,8 @@
         <li id="clock"><digital-clock :display-seconds="true" /></li>
 
         <li id="ip-address">{{ ciudad }}</li>
-<!--        <li id="counter">{{ counter }}</li>-->
-        <li class="red" id="counter">LIVE NOW</li>
+        <!--        <li id="counter">{{ counter }}</li>-->
+        <li id="counter" class="red">LIVE NOW</li>
       </ul>
     </div>
     <router-link to="/" @click.native="$root.scrollTop"><span class="copyleft">&copy;</span> {{ new Date().getFullYear() }} / {{ $site.title }}</router-link>

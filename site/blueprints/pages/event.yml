@@ -59,6 +59,15 @@ columns:
         label: Toggle
         type: toggle
         text: Include artists in cover?
+
+      live:
+        label: Stream
+        type: toggle
+        text: Include video stream?
+
+      Streamurl:
+        label: Stream URL
+        type: url
       autopublish:
         label: Autopublish on
         type: date
