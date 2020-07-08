@@ -17,7 +17,7 @@ use Throwable;
  * The API class is a generic container
  * for API routes, models and collections and is used
  * to run our REST API. You can find our API setup
- * in `kirby/config/api.php`.
+ * in `kirby/config/upload.php`.
  *
  * @package   Kirby Api
  * @author    Bastian Allgeier <bastian@getkirby.com>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="large-12 medium-12 small-12 cell">
-      <h1>Vue JS Axios - Image Upload using PHP API - ItSolutionStuff.com</h1>
+    <div>
+      <h1>P2P test</h1>
       <label>File
         <input id="file" ref="file" type="file" @change="onChangeFileUpload()">
       </label>
@@ -23,18 +23,19 @@ export default {
       const formData = new FormData()
       formData.append('file', this.file)
 
-      this.axios.post('http://localhost:8080/api.php',
+      this.axios.post('http://soc.test/client/api/upload/',
         formData,
         {
           headers: {
-            'Content-Type': 'multipart/form-data'
+            'Content-Type': 'multipart/form-data',
+            'Access-Control-Allow-Origin': '*'
           }
         }
       ).then(function (data) {
         console.log(data.data)
       })
-        .catch(function () {
-          console.log('FAILURE!!')
+        .catch(function (error) {
+          console.log(error.message)
         })
     },
 
