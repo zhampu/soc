@@ -4,6 +4,9 @@ $base = dirname(__DIR__, 2);
 (new \Beebmx\KirbyEnv($base))->load();
 
 return [
+    'api' => [
+        'allowInsecure' => true
+    ],
     //Matomo
     'sylvainjule.matomo.url' => 'https://track.juangomez.co/',
     'sylvainjule.matomo.id' => '4', // id 4 -- stationofcommons.org   id 5 -- staging.stationofcommons.org
@@ -43,7 +46,7 @@ return [
     //Smartypants corrections
     'smartypants' => true,
 
-        'languages' => true
+//        'languages' => true
 
 
 

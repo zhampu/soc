@@ -8,6 +8,11 @@ import 'normalize.css'
 import VueMatomo from 'vue-matomo'
 import moment from 'moment'
 import VueCountdown from '@xkeshi/vue-countdown'
+import VueFileAgent from 'vue-file-agent'
+import VueAxios from 'vue-axios'
+import axios from 'axios'
+Vue.use(VueFileAgent)
+Vue.use(VueAxios, axios)
 Vue.component(VueCountdown.name, VueCountdown)
 Vue.prototype.moment = moment
 Vue.use(VueMatomo, {

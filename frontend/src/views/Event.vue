@@ -13,13 +13,12 @@
               </li>
             </ul>
           </figcaption>
-        </figure>
-        <video v-if="page.toggle === 'true'" controls="controls" autoplay="autoplay">
+        </figure>œ
+        <video v-if="page.livi === 'true'" controls="controls" autoplay="autoplay">
           <source :src="page.streamurl" type="video/webm">
           <source src="http://streamer.nettitila.fi:8000/video1" type="video/MP2T">
           <source src="http://streamer.nettitila.fi:8000/video1.m3u" type="video/MP2T">
           <source src="http://streamer.nettitila.fi:8000/Station_of_commons_video" type="video/webm">
-
 
         </video>
       </header>

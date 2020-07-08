@@ -60,7 +60,7 @@ columns:
         type: toggle
         text: Include artists in cover?
 
-      live:
+      livi:
         label: Stream
         type: toggle
         text: Include video stream?
