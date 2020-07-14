@@ -65,6 +65,11 @@ columns:
         type: toggle
         text: Include video stream?
 
+      p2p:
+        label: P2P
+        type: toggle
+        text: Include File sharing p2p?
+
       Streamurl:
         label: Stream URL
         type: url

@@ -34,7 +34,6 @@
         </transition>
       </keep-alive>
     </div>
-    <Upload />
     <Footer />
   </div>
 </template>
@@ -42,15 +41,13 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-import Upload from '@/components/Upload'
 
 export default {
   name: 'App',
 
   components: {
     Header,
-    Footer,
-    Upload
+    Footer
   },
 
   data () {

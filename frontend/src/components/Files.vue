@@ -6,7 +6,7 @@
   <!--      </label>-->
   <!--      <button @click="submitForm()">Upload</button>-->
   <!--    </div>-->
-  <iframe src="http://staging.stationofcommons.org/uploads/upload.php" width="100%" />
+  <iframe src="https://staging.stationofcommons.org/uploads/files/" width="100%" />
 </template>
 
 <script>

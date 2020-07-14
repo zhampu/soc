@@ -14,6 +14,7 @@ $data = [
   })->data()),
   'toggle' => $page->toggle()->value(),
   'livi' => $page->livi()->value(),
+  'p2p' => $page->p2p()->value(),
   'streamurl' => $page->streamurl()->value(),
   'date' => $page->date()->toDate('d.m.Y'),
   'tags' => $page->tags()->isNotEmpty() ? $page->tags()->value() : null,

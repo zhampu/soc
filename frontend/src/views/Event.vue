@@ -13,7 +13,7 @@
               </li>
             </ul>
           </figcaption>
-        </figure>œ
+        </figure>
         <video v-if="page.livi === 'true'" controls="controls" autoplay="autoplay">
           <source :src="page.streamurl" type="video/webm">
           <source src="http://streamer.nettitila.fi:8000/video1" type="video/MP2T">
@@ -22,6 +22,11 @@
 
         </video>
       </header>
+
+      <div v-if="page.p2p === 'true'">
+        <Upload />
+        <Files />
+      </div>
       <div class="text">
         <ul v-if="page.toggle ==='true'">
           <li v-for="guests in page.guests" :key="guests.id">
@@ -50,9 +55,14 @@
 
 <script>
 import page from '@/mixins/page'
-
+import Upload from '@/components/Upload'
+import Files from '@/components/Files'
 export default {
   name: 'Event',
+  components: {
+    Upload,
+    Files
+  },
 
   mixins: [page]
 }
